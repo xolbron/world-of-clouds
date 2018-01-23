@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>The World of Clouds</title>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-mountain-component@0.3.3/dist/aframe-mountain-component.min.js"></script>
+    <script src="https://ideaspacevr.github.io/aframe-particle-system-component/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+          <a-entity>
+                <a-camera>
+                    <a-text 
+                        value="The World of Clouds" 
+                        color="black" 
+                        rotation="0 0 0" 
+                        position="-3 0 -5" 
+                        scale="3 3 3" 
+                        opacity="1">
+                        <a-animation 
+                            attribute="opacity"
+                            dur="12000"
+                            fill="forwards"
+                            to="0"
+                        ></a-animation>
+                        
+                    </a-text>
+                </a-camera>
+            </a-entity>
+            
+      
+      <a-entity position="0 2.25 -15" particle-system="preset: snow; particleCount: 5000"></a-entity>
+
+      
+      <a-sky color="lightblue"></a-sky>
+      <a-mountain position="0 -10000 0" color="#e8e8e8">
+          <a-animation 
+              attribute="position"
+              dur="10000"
+              fill="forwards"
+              to="0 50 0"
+          ></a-animation>
+      </a-mountain>
+                    
+      
+    </a-scene>
+  </body>
+</html>
